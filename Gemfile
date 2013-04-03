@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'pg'
+gem 'sqlite3'
 gem 'jbuilder', '~> 1.0.1' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'strong_parameters'
 
 gem 'bcrypt-ruby', '~> 3.0.0' #has_secure_password
 gem 'vestal_versions', git: 'git://github.com/zhangyuan/vestal_versions'
@@ -20,6 +22,7 @@ gem 'clockwork', require: false
 gem 'sidekiq'
 gem 'redis'
 gem 'redis-rails'
+gem 'carrierwave'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -27,6 +30,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'turbo-sprockets-rails3'
   gem 'compass-rails'
+  gem 'susy'
   gem 'therubyracer', require: 'v8', platforms: :ruby
 end
 
