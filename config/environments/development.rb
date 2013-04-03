@@ -35,5 +35,5 @@ Read2::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  config.ember_variant = :development
+  config.ember.variant = :development
 end
