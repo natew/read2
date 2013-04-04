@@ -5,7 +5,8 @@ class Feed < ActiveRecord::Base
   belongs_to :site
   
   validates :url, presence: true
-  validates :site_id, in: -> { |id| Site.pluck(:id) }
+  validates :site_id,
+    inclusion: { in: ->(id) { Site.pluck(:id) } }
 
   def types
     {
