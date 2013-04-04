@@ -14,7 +14,7 @@ gem 'ember-rails'
 gem 'slim'
 gem 'sorcery'
 gem 'simple_form'
-gem 'feedzirra'
+gem 'feedzirra', require: false
 gem 'nokogiri'
 gem 'rinku'
 gem 'clockwork', require: false
@@ -23,6 +23,7 @@ gem 'sidekiq'
 gem 'redis'
 gem 'redis-rails'
 gem 'carrierwave'
+gem 'multi_json'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -48,7 +49,7 @@ group :test do
   # gem 'database_cleaner'
   # gem 'launchy'
   # gem 'poltergeist', :github => 'LJV/poltergeist'
-  # gem "rspec-rails", "~> 2.0"
+  gem "rspec-rails", "~> 2.0"
   # gem "sourcify", :github => 'LJV/sourcify'
   # gem 'seed-fu'
   # gem 'selenium-webdriver', '>= 2.31.0'

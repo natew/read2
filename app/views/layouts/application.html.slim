@@ -1,0 +1,19 @@
+doctype html
+/! Font thanks to Font Awesome - http://fortawesome.github.com/Font-Awesome
+html lang="en-US"
+  head
+    title='something'
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application'
+    meta content=INFO['name'] name="author"
+    link href="#{rss_path}" rel="alternate" title="RSS" type="application/rss+xml"
+    link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'
+    - if INFO['ga_id']
+      /! Google Analytics
+      javascript:
+        var _gaq=[['_setAccount',' #{INFO['ga_id']} '],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+  body
+    = javascript_include_tag 'application'
