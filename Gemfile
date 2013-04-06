@@ -9,22 +9,25 @@ gem 'strong_parameters'
 
 gem 'bcrypt-ruby', '~> 3.0.0' #has_secure_password
 gem 'vestal_versions', git: 'git://github.com/zhangyuan/vestal_versions'
-gem 'ember-rails'
 
-gem 'slim'
+gem 'ember-rails'
+gem 'emblem-rails'
+
 gem 'sorcery'
 gem 'simple_form'
 gem 'feedzirra', require: false
 gem 'nokogiri'
 gem 'rinku'
 gem 'clockwork', require: false
-# gem 'cocaine' # parse dates
-gem 'sidekiq'
-gem 'sinatra' # for sidekiq
-gem 'redis'
-gem 'redis-rails'
 gem 'carrierwave'
 gem 'multi_json'
+# gem 'cocaine' # parse dates
+
+gem 'sidekiq'
+gem 'slim' # for sidekiq web server
+gem 'sinatra' # for sidekiq web server
+gem 'redis'
+gem 'redis-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -41,6 +44,7 @@ group :development do
   gem 'seed-fu'
   gem 'quiet_assets'
   gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do

@@ -1,6 +1,6 @@
 class FeedsController < ApplicationController
 
-  before_filter :require_login, only: [:index, :show]
+  # before_filter :require_login, only: [:index, :show]
 
   def index
   end
