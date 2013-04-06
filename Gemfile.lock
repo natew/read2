@@ -223,6 +223,8 @@ GEM
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    sinatra (1.0)
+      rack (>= 1.0)
     slim (1.3.6)
       temple (~> 0.5.5)
       tilt (~> 1.3.3)
@@ -289,6 +291,7 @@ DEPENDENCIES
   seed-fu
   sidekiq
   simple_form
+  sinatra
   slim
   sorcery
   sqlite3

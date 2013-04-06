@@ -20,6 +20,7 @@ gem 'rinku'
 gem 'clockwork', require: false
 # gem 'cocaine' # parse dates
 gem 'sidekiq'
+gem 'sinatra' # for sidekiq
 gem 'redis'
 gem 'redis-rails'
 gem 'carrierwave'
