@@ -13,6 +13,3 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-# Ignore config.rb livereload files
-/app/assets/*/config.rb

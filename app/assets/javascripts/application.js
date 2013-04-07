@@ -12,10 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require handlebars
-//= require ember
-//= require ember-data
 //= require_self
-//= require read2
-Read2 = Ember.Application.create();
 //= require_tree .

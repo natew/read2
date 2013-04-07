@@ -6,12 +6,9 @@ gem 'pg'
 gem 'sqlite3'
 gem 'jbuilder', '~> 1.0.1' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'strong_parameters'
-
+gem 'yajl-ruby' # faster JSON
 gem 'bcrypt-ruby', '~> 3.0.0' #has_secure_password
 gem 'vestal_versions', git: 'git://github.com/zhangyuan/vestal_versions'
-
-gem 'ember-rails'
-gem 'emblem-rails'
 
 gem 'sorcery'
 gem 'simple_form'
@@ -34,12 +31,18 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'turbo-sprockets-rails3'
-  gem 'compass-rails'
   gem 'susy'
   gem 'therubyracer', require: 'v8', platforms: :ruby
 end
 
 group :development do
+  gem 'compass-rails'
+  gem 'rack-livereload'
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'guard-bundler'
+  # gem 'guard-compass'
+  gem 'rb-fsevent', '~> 0.9', require: false # for guard on mac
   gem 'capistrano'
   gem 'seed-fu'
   gem 'quiet_assets'

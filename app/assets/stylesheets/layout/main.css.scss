@@ -1,12 +1,46 @@
-#tray {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 200px;
-  background: #eee;
+html {
+  font-size: 62.5%;
+  /* Allows for logical em to px conversions
+     1.4rem = 14px, 2.4rem = 24px */
 }
 
-#read {
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
 
+a {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 2.8rem;
+}
+
+#main {
+  padding: 20px;
+}
+
+article {
+
+  /* Unread indicator */
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: green;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.interact {
+  a {
+    margin: 0 20px 0 0;
+  }
 }
