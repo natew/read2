@@ -5,6 +5,8 @@ class SorceryCore < ActiveRecord::Migration
       t.string :crypted_password, :default => nil
       t.string :salt,             :default => nil
 
+      t.string :uid
+
       t.timestamps
     end
   end
