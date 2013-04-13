@@ -1,10 +1,10 @@
 class Entry < ActiveRecord::Base
 
-  attr_accessible :title, :link, :guid, :description, :published
+  attr_accessible :title, :url, :etag, :content, :published
 
   belongs_to :site
 
-  validates :link, presence: true
-  validates :guid, presence: true
+  validates :url, presence: true
+  validates :etag, presence: true
 
 end

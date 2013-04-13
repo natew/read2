@@ -2,13 +2,11 @@ class CreateEntries < ActiveRecord::Migration
   def change
     create_table :entries do |t|
       t.string :title
-      t.string :link, null: false
-      t.string :guid
-      t.string :image
+      t.string :url, null: false
+      t.string :etag
       t.string :category
-      t.string :copyright
       t.string :author
-      t.text :description
+      t.text :content
 
       t.references :site
       t.timestamp :published
