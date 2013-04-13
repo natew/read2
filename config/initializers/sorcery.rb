@@ -2,10 +2,12 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
-Rails.application.config.sorcery.submodules = [:user_activation, :reset_password, :remember_me, :activity_logging, :external]
+Rails.application.config.sorcery.submodules = [:user_activation, :reset_password, :remember_me, :activity_logging, :external, :activation, :brute_force_protection]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
+
+  
 
   config.external_providers = [:google]
 
@@ -25,8 +27,8 @@ Rails.application.config.sorcery.configure do |config|
     user.subclasses_inherit_config                    = true
 
     user.user_activation_mailer                       = UserMailer
-    user.activation_token_attribute_name              = :activation_code
-    user.activation_token_expires_at_attribute_name   = :activation_code_expires_at
+    user.activation_token_attribute_name              = :activation_token
+    user.activation_token_expires_at_attribute_name   = :activation_token_expires_at
 
     user.reset_password_mailer                        = UserMailer
     user.reset_password_expiration_period             = 10.minutes
@@ -34,8 +36,8 @@ Rails.application.config.sorcery.configure do |config|
 
     user.activity_timeout                             = 1.minutes
 
-    # user.consecutive_login_retries_amount_limit       = 8
-    # user.login_lock_time_period                       = 4.minutes
+    user.consecutive_login_retries_amount_limit       = 8
+    user.login_lock_time_period                       = 4.minutes
 
     user.authentications_class                        = Authentication
   end

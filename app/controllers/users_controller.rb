@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
 
   skip_before_filter :require_login, only: [:activate, :create, :new]
+
+  def new
+    @user = User.new
+  end
   
   # POST /users
   def create
