@@ -7,9 +7,6 @@ Rails.application.config.sorcery.submodules = [:user_activation, :reset_password
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
 
-  config.session_timeout = 2.months
-  config.session_timeout_from_last_action = true
-
   config.external_providers = [:google]
 
   # config.twitter.key = "eYVNBjBDi33aa9GkA3w"
@@ -37,10 +34,10 @@ Rails.application.config.sorcery.configure do |config|
 
     user.activity_timeout                             = 1.minutes
 
-    user.consecutive_login_retries_amount_limit       = 8
-    user.login_lock_time_period                       = 4.minutes
+    # user.consecutive_login_retries_amount_limit       = 8
+    # user.login_lock_time_period                       = 4.minutes
 
-    user.authentications_class                        = Session
+    user.authentications_class                        = Authentication
   end
 
   # This line must come after the 'user config' block.

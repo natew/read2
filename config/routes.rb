@@ -13,8 +13,8 @@ Read2::Application.routes.draw do
     end
   end
 
-  match 'login': 'user_sessions#new', as: :login
-  match 'logout': 'user_sessions#destroy', as: :logout
+  match 'login' => 'user_sessions#new', as: :login
+  match 'logout' => 'user_sessions#destroy', as: :logout
 
   resources :user_sessions, only: [:new, :create, :destroy]
   resources :password_resets, only: [:create, :edit, :update]
